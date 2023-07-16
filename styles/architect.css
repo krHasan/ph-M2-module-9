@@ -8,25 +8,25 @@
     margin: 0;
     padding: 0;
 }
+.text-light-gray {
+    color: #727272;
+    margin: 20px 0 30px 0;
+}
 .btn-primary {
     border-radius: 8px;
+    color: #FFF;
+    font-size: 1.25rem;
     background: #FF900E;
     padding: 20px 25px;
     color: #FFF;
-    font-size: 1.25rem;
     cursor: pointer;
     border: 0;
 }
 
 /* header styles */
 header {
-    background-color: rgba(255, 144, 14, 0.10);
+    background: rgba(255, 144, 14, 0.10);
     padding: 50px 240px;
-}
-.nav-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #131313;
 }
 nav {
     display: flex;
@@ -58,15 +58,42 @@ nav li a {
     font-weight: 700;
     color: #131313;
 }
-.banner-description {
-    color: #727272;
-
-}
 .banner img {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
 }
 
+
+/* main styles */
+main {
+    max-width: 1440px;
+    margin: 70px auto;
+}
+
+/* teams styles */
+.teams-container {
+    display: flex;
+    align-items: center;
+}
+.teams-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.teams-content {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.teams-title {
+    font-size: 2.8rem;
+}
+.teams-title .quick-list {
+    font-weight: 500;
+}
+.teams-title .text-features {
+    color: #FF900E;
+    font-weight: 700;
+}
 
 
 
@@ -75,16 +102,18 @@ nav li a {
     header {
         padding: 20px;
     }
-    nav {
+    nav, .teams-container {
         flex-direction: column;
     }
-    
+    .teams-img-container {
+        grid-template-columns: 1fr;
+    }
 }
 @media screen and (min-width: 576px) and (max-width:992px) {
     header {
         padding: 50px;
     }
-    nav {
+    nav, .teams-container {
         flex-direction: column;
     }
 }
